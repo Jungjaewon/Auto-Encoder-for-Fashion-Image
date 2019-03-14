@@ -1,0 +1,46 @@
+# Model confiurations
+  image size : 256
+  encoder_mode : 0
+  encoder_last : max
+  encoder_start_ch : 64
+  encoder_target_ch : 25
+
+# Training configuration
+  dataset : Polyvore
+  batch_size : 32
+  num_iters : 600000
+  num_iters_decay : 100000
+  e_lr : 0.0001
+  beta1 : 0.9
+  beta2 : 0.999
+  resume_iters : None
+  train_pickle : ./train_datalist.pickle
+  test_pickle : 
+  gpu : 0
+
+# Test configuration
+  test_iters : 200000
+
+# Miscellaneous
+  num_workers : 4
+  mode : train
+  use_tensorboard : False
+  email_address : woodcook486@naver.com
+  image_sending : 10
+
+# Directories
+  image_dir : /home/woodcook486/polyvore/data/images/
+  train_json : data/cleaned_train_no_dup.json
+  test_json : data/cleaned_test_no_dup.json
+  train_dir : target_ch25_s64
+  log_dir : logs
+  model_save_dir : models
+  sample_dir : samples
+  result_dir : results
+
+# Step size
+  log_step : 1000
+  sample_step : 10000
+  model_save_start : 300000
+  model_save_step : 20000
+  lr_update_step : 100000
